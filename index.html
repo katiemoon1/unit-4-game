@@ -10,6 +10,48 @@
     <title>Crystal Guessing Game with jQuery!</title>
 </head>
 <body>
+    <div class="container header">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Crystal Collector!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>How to play:</h2>
+                <p>At the start of the game, you will be given a number.</p>
+                <p>The four crystals displayed at the bottom of the page will add specific amounts of points to the initial value when clicked on.</p>
+                <p>You win if your score matches the random number (yay!) and lose if your number goes over.</p>
+                <p>At the start of each game, the values will be changed for each crystal.</p>
+                <p>Good luck!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Your Number:</h3>
+                        <p id="playerGuess"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Perfect Number:</h3>
+                        <p id="perfectNumber"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h4>Score:</h4>
+                <p id="wins"></p>
+                <p id="losses"></p>
+            </div>
+        </div>
+    </div>
     
+<script type="text/javascript" src="./assets/javascript/game.js"></script>    
 </body>
 </html>
