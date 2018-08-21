@@ -1,3 +1,7 @@
-.container {
-    background-image: url("../images/legendofzeldalink.jpg")
+body {
+    background-color: coral !important;
+}
+
+h1 {
+    font-style: bold;
 }
