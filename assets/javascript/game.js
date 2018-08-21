@@ -31,7 +31,7 @@ $("#red").on("click", function(){
 function perfectNumber(min, max) {
     min = Math.ceil(19);
     max = Math.floor(120);
-    return Math.floor(Math.random() * (120-19)) + 19;
+    $("#perfect-number").append(Math.floor(Math.random() * (120-19)) + 19);
 }
 
 
