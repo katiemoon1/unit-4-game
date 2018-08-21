@@ -14,7 +14,6 @@ function initializeGame () {
     $("#heart, #blue, #green, #red, #player-guess").empty();
 }
 
-
 $("#heart").on("click", function(){
     console.log(Math.floor(Math.random() * 13))
 });
@@ -29,7 +28,11 @@ $("#red").on("click", function(){
 });
 
 
-
+function perfectNumber(min, max) {
+    min = Math.ceil(19);
+    max = Math.floor(120);
+    return Math.floor(Math.random() * (120-19)) + 19;
+}
 
 
 
