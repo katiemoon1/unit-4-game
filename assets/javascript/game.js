@@ -29,17 +29,65 @@ var perfectNumber = function perfectNumber() {
     var min = Math.ceil(19);
     var max = Math.floor(120);
     var perfect = (Math.floor(Math.random() * (120-19)) + 19);
-    $("#perfect-number").append(perfect);
+    $("#perfect-number").text(perfect);
 }
 
-// If/Else statement for keeping score
-var checking = function () {
-    if (playerGuess === perfectNumber) {
-        $("#player-wins").append(playerWins++)
+var winning = function () {
+    playerWins++;
+    $("#player-wins").text(playerWins);
+    gameStart();
+}
+
+var losing = function () {
+    playerLosses++;
+    $("#player-losses").text(playerLosses);
+    gameStart();
+}
+
+
+$("#heart").on("click", function() { 
+    playerGuess = playerGuess + heartCrystal;
+    $("#player-guess").text(playerGuess);
+
+    if (playerGuess === perfect) {
+        winning();
+    } else if (playerGuess > perfect) {
+        losing();
     }
-    else if (playerGuess >= perfectNumber) {
-        $("#player-losses").append(playerLosses++)
-    }};
+});
+
+$("#blue").on("click", function() { 
+    playerGuess = playerGuess + blueCrystal;
+    $("#player-guess").text(playerGuess);
+
+    if (playerGuess === perfect) {
+        winning();
+    } else if (playerGuess > perfect) {
+        losing();
+    }
+});
+
+$("#green").on("click", function() { 
+    playerGuess = playerGuess + greenCrystal;
+    $("#player-guess").text(playerGuess);
+
+    if (playerGuess === perfect) {
+        winning();
+    } else if (playerGuess > perfect) {
+        losing();
+    }
+});
+
+$("#red").on("click", function() { 
+    playerGuess = playerGuess + redCrystal;
+    $("#player-guess").text(playerGuess);
+
+    if (playerGuess === perfect) {
+        winning();
+    } else if (playerGuess > perfect) {
+        losing();
+    }
+});
 
 // Calling the functions
 gameStart();
