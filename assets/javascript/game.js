@@ -13,7 +13,7 @@ var perfect = "";
 var gameStart = function () {
     playerGuess = 0;
 
-    $("#heart, #blue, #green, #red, #player-guess").empty();
+    $("#heart, #blue, #green, #red, #player-guess, #perfect-number").empty();
 }
 
 // Function to set the values of the crystals
@@ -37,6 +37,7 @@ var winning = function () {
     playerWins++;
     $("#player-wins").text(playerWins);
     gameStart();
+    perfectNumber();
 }
 
 // Losing function that adds 1 each time the player loses
@@ -44,6 +45,7 @@ var losing = function () {
     playerLosses++;
     $("#player-losses").text(playerLosses);
     gameStart();
+    perfectNumber();
 }
 
 

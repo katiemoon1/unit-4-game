@@ -1,15 +1,23 @@
 body {
     background-image: url("../images/legendofzeldalink.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Jua', sans-serif;
 }
 
 .header {
     font-style: bold;
+    background-color: hsla(360, 100%, 100%, 0.71);
 }
+
+.text-center {
+    background-color: hsla(360, 100%, 100%, 0.71);
+}
+
 .crystals {
     border: 1px;
-    background-color: white;
-    opacity: 0.75;
+    background-color: hsla(360, 100%, 100%, 0.71);
 }
 
