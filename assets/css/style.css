@@ -1,8 +1,15 @@
 body {
-    background-image: url("../images/legendofzeldalink.jpg")
+    background-image: url("../images/legendofzeldalink.jpg");
+    background-size: cover;
+    font-family: 'Jua', sans-serif;
 }
 
 .header {
     font-style: bold;
+}
+.crystals {
+    border: 1px;
+    background-color: white;
+    opacity: 0.75;
 }
 

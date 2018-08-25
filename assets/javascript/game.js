@@ -7,7 +7,7 @@ var heartCrystal = 0;
 var blueCrystal = 0;
 var greenCrystal = 0;
 var redCrystal = 0;
-var perfect = 0;
+var perfect = "";
 
 // Function to clear values at the start of the game
 var gameStart = function () {
@@ -28,16 +28,18 @@ var setCrystals = function () {
 var perfectNumber = function perfectNumber() {
     var min = Math.ceil(19);
     var max = Math.floor(120);
-    var perfect = (Math.floor(Math.random() * (120-19)) + 19);
+    perfect = (Math.floor(Math.random() * (120-19)) + 19);
     $("#perfect-number").text(perfect);
 }
 
+// Winning function that adds 1 each time the player wins
 var winning = function () {
     playerWins++;
     $("#player-wins").text(playerWins);
     gameStart();
 }
 
+// Losing function that adds 1 each time the player loses
 var losing = function () {
     playerLosses++;
     $("#player-losses").text(playerLosses);
@@ -48,6 +50,8 @@ var losing = function () {
 $("#heart").on("click", function() { 
     playerGuess = playerGuess + heartCrystal;
     $("#player-guess").text(playerGuess);
+    console.log(playerGuess);
+    console.log(perfect);
 
     if (playerGuess === perfect) {
         winning();
@@ -59,6 +63,8 @@ $("#heart").on("click", function() {
 $("#blue").on("click", function() { 
     playerGuess = playerGuess + blueCrystal;
     $("#player-guess").text(playerGuess);
+    console.log(playerGuess);
+    console.log(perfect);
 
     if (playerGuess === perfect) {
         winning();
@@ -70,6 +76,8 @@ $("#blue").on("click", function() {
 $("#green").on("click", function() { 
     playerGuess = playerGuess + greenCrystal;
     $("#player-guess").text(playerGuess);
+    console.log(playerGuess);
+    console.log(perfect);
 
     if (playerGuess === perfect) {
         winning();
@@ -81,6 +89,8 @@ $("#green").on("click", function() {
 $("#red").on("click", function() { 
     playerGuess = playerGuess + redCrystal;
     $("#player-guess").text(playerGuess);
+    console.log(playerGuess);
+    console.log(perfect);
 
     if (playerGuess === perfect) {
         winning();
